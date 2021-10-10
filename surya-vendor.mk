@@ -787,15 +787,14 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/surya/proprietary/vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.fm@1.0 \
-    CACertService \
-    CneApp \
-    IWlanService \
-    PowerOffAlarm \
     QtiTelephonyService \
     dpmserviceapp \
     ims \
     qcrilmsgtunnel \
+    CACertService \
+    CneApp \
+    IWlanService \
+    PowerOffAlarm \
     manifest_android.hardware.drm@1.3-service.widevine \
     vendor.qti.gnss@4.0-service
 PRODUCT_COPY_FILES += \
