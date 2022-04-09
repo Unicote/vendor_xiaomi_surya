@@ -276,29 +276,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcameraservice_surya \
     android.hardware.camera.provider@2.4-legacy \
-    eglSubDriverAndroid \
-    libEGL_adreno \
-    libGLESv1_CM_adreno \
-    libGLESv2_adreno \
-    libq3dtools_adreno \
-    libq3dtools_esx \
-    vulkan.adreno \
-    libC2D2 \
-    libCB \
-    libOpenCL \
     libStDrvInt \
-    libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
-    libc2d30_bltlib \
     libcdsp_default_listener \
     libdiag \
-    libdpps \
     libdsutils \
-    libgsl \
     libidl \
-    libllvm-glnext \
-    libllvm-qcom \
     libmdmdetect \
     libmmosal_vendor \
     libqmi \
@@ -556,7 +540,6 @@ PRODUCT_PACKAGES += \
     libconfigdb \
     libcpion \
     libdataitems \
-    libdisplayqos \
     libdng_sdk2vendor \
     libdpmqmihal \
     libdrmfs \
@@ -568,7 +551,6 @@ PRODUCT_PACKAGES += \
     libgf_hal \
     libgoodixhwfingerprint \
     libhdcpsrm \
-    libhdr_tm \
     libhvx_interface \
     libizat_client_api \
     libizat_core \
@@ -617,7 +599,6 @@ PRODUCT_PACKAGES += \
     libqdp \
     libqisl \
     libqrtr \
-    libqseed3 \
     libqsocket \
     libqtikeymaster4 \
     librcc \
@@ -627,13 +608,7 @@ PRODUCT_PACKAGES += \
     libril-qc-logger \
     librilqmiservices \
     librpmb \
-    libsdedrm \
     libsdk_sr \
-    libsdm-color \
-    libsdm-colormgr-algo \
-    libsdm-diag \
-    libsdm-disp-vndapis \
-    libsdmextension \
     libsdsprpc \
     libsensorslog \
     libsns_device_mode_stub \
@@ -652,7 +627,6 @@ PRODUCT_PACKAGES += \
     libthermalclient \
     libthermalfeature \
     libtime_genoff \
-    libtinyxml2_1 \
     libtriplecam_optical_zoom_control \
     libtriplecam_video_optical_zoom \
     libtrustedapploader \
@@ -822,3 +796,33 @@ PRODUCT_PACKAGES += \
     vppservice \
     xtra-daemon \
     dpmd
+
+PRODUCT_PACKAGES += \
+    eglSubDriverAndroid \
+    libEGL_adreno \
+    libGLESv1_CM_adreno \
+    libGLESv2_adreno \
+    libq3dtools_adreno \
+    libq3dtools_esx \
+    vulkan.adreno \
+    libC2D2 \
+    libCB \
+    libOpenCL \
+    libadreno_utils \
+    libc2d30_bltlib \
+    libdpps \
+    libgsl \
+    libllvm-glnext \
+    libllvm-qcom \
+    libdisplayqos \
+    libhdr_tm \
+    libqseed3 \
+    libsdedrm \
+    libsdm-color \
+    libsdm-colormgr-algo \
+    libsdm-diag \
+    libsdm-disp-vndapis \
+    libsdmextension \
+    libtinyxml2_1 \
+    adreno_graphics_driver \
+    gpu_profiling_vulkan_layer
