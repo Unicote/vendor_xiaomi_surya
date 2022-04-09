@@ -102,9 +102,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/surya/proprietary/vendor/etc/configstore/vpp.configstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/configstore/vpp.configstore.xml \
     vendor/xiaomi/surya/proprietary/vendor/etc/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
     vendor/xiaomi/surya/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
-    vendor/xiaomi/surya/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
-    vendor/xiaomi/surya/proprietary/vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.0-service-qti.rc \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
@@ -121,7 +119,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/ipa_fws.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipa_fws.rc \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/qcrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrild.rc \
-    vendor/xiaomi/surya/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-sscrpc-service.rc \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm@1.0-service.rc \
@@ -276,7 +273,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcameraservice_surya \
     android.hardware.camera.provider@2.4-legacy \
-    libStDrvInt \
     libadsp_default_listener \
     libadsprpc \
     libcdsp_default_listener \
@@ -293,16 +289,12 @@ PRODUCT_PACKAGES += \
     libqmi_csi \
     libqmi_encdec \
     libqmiservices \
-    libsecureui \
-    libsecureui_svcsock \
-    libspl \
     libtinycompress \
     libvpphvx \
     libvpplibrary \
     vendor.qti.hardware.btconfigstore@1.0_vendor \
     vendor.qti.hardware.btconfigstore@2.0_vendor \
     vendor.qti.hardware.camera.device@1.0_vendor \
-    vendor.qti.hardware.tui_comm@1.0_vendor \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
     vendor.qti.hardware.vpp@1.3 \
@@ -486,11 +478,8 @@ PRODUCT_PACKAGES += \
     lib-siputility \
     lib-uceservice \
     libFaceGrade \
-    libGPreqcancel \
-    libGPreqcancel_svc \
     libHalSuperSensorServer \
     libMegviiFacepp-0.5.2 \
-    libQSEEComAPI \
     libSNPE \
     libSuperSensor \
     libSuperSensorCPU \
@@ -538,19 +527,15 @@ PRODUCT_PACKAGES += \
     libcneoplookup \
     libcom.qti.chinodeutils \
     libconfigdb \
-    libcpion \
     libdataitems \
     libdng_sdk2vendor \
     libdpmqmihal \
-    libdrmfs \
-    libdrmtime \
     libdsi_netctrl \
     libft2vendor \
     libgdtap \
     libgf_ca \
     libgf_hal \
     libgoodixhwfingerprint \
-    libhdcpsrm \
     libhvx_interface \
     libizat_client_api \
     libizat_core \
@@ -577,16 +562,12 @@ PRODUCT_PACKAGES += \
     libmialgo_utils \
     libmialgoengine \
     libmibokeh_712 \
-    libminkdescriptor \
-    libminksocket \
     libmpbase \
     libnetmgr \
     libnetmgr_common \
     libnetmgr_nr_fusion \
     libnetmgr_rmnet_ext \
     libnlnetmgr \
-    liboemcrypto \
-    libops \
     libpdmapper \
     libpdnotifier \
     libperipheral_client \
@@ -597,7 +578,6 @@ PRODUCT_PACKAGES += \
     libqcrildatactl \
     libqdi \
     libqdp \
-    libqisl \
     libqrtr \
     libqsocket \
     libqtikeymaster4 \
@@ -607,7 +587,6 @@ PRODUCT_PACKAGES += \
     libril-qc-hal-qmi \
     libril-qc-logger \
     librilqmiservices \
-    librpmb \
     libsdk_sr \
     libsdsprpc \
     libsensorslog \
@@ -619,7 +598,6 @@ PRODUCT_PACKAGES += \
     libsnsdiaglog \
     libssc \
     libssc_default_listener \
-    libssd \
     libst_sr_models \
     libswregistrationalgo \
     libsymphony-cpu \
@@ -629,18 +607,15 @@ PRODUCT_PACKAGES += \
     libtime_genoff \
     libtriplecam_optical_zoom_control \
     libtriplecam_video_optical_zoom \
-    libtrustedapploader \
     libvendor.goodix.hardware.biometrics.fingerprint@2.1 \
     libvideofilter_only \
     libvidhance \
     libwms \
     libwqe \
-    libwvhidl \
     libxmi_high_dynamic_range \
     libxml \
     libxml2_vendor \
     libxtadapter \
-    libwvdrmengine \
     qcrild_librilutils \
     qtibus \
     qtimutex \
@@ -713,7 +688,6 @@ PRODUCT_PACKAGES += \
     libmmrtpencoder \
     vendor.qti.hardware.btconfigstore@1.0_system_ext \
     vendor.qti.hardware.btconfigstore@2.0_system_ext \
-    vendor.qti.hardware.tui_comm@1.0_system_ext \
     vendor.qti.hardware.camera.device@1.0_system_ext \
     com.qualcomm.qti.dpm.api@1.0_system_ext \
     fm_helium \
@@ -751,7 +725,6 @@ PRODUCT_PACKAGES += \
     qcrilhook \
     qti-telephony-common \
     libsnpe_dsp_v66_domains_v2_skel \
-    manifest_android.hardware.drm@1.3-service.widevine \
     vendor.qti.gnss@4.0-service \
     chargeonlymode \
     adpl \
@@ -764,7 +737,6 @@ PRODUCT_PACKAGES += \
     dspservice \
     hvdcp_opti \
     android.hardware.bluetooth@1.0-service-qti \
-    android.hardware.drm@1.3-service.widevine \
     android.hardware.gatekeeper@1.0-service-qti \
     android.hardware.keymaster@4.0-service-qti \
     qcrild \
@@ -785,7 +757,6 @@ PRODUCT_PACKAGES += \
     pm-service \
     power_off_alarm \
     qrtr-ns \
-    qseecomd \
     qti \
     rmt_storage \
     sensors.qti \
@@ -796,6 +767,9 @@ PRODUCT_PACKAGES += \
     vppservice \
     xtra-daemon \
     dpmd
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/surya/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
+    vendor/xiaomi/surya/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc
 
 PRODUCT_PACKAGES += \
     eglSubDriverAndroid \
@@ -808,21 +782,46 @@ PRODUCT_PACKAGES += \
     libC2D2 \
     libCB \
     libOpenCL \
+    libStDrvInt \
     libadreno_utils \
     libc2d30_bltlib \
     libdpps \
     libgsl \
     libllvm-glnext \
     libllvm-qcom \
+    libsecureui \
+    libsecureui_svcsock \
+    libspl \
+    vendor.qti.hardware.tui_comm@1.0_vendor \
+    libGPreqcancel \
+    libGPreqcancel_svc \
+    libQSEEComAPI \
+    libcpion \
     libdisplayqos \
+    libdrmfs \
+    libdrmtime \
+    libhdcpsrm \
     libhdr_tm \
+    libminkdescriptor \
+    libminksocket \
+    liboemcrypto \
+    libops \
+    libqisl \
     libqseed3 \
+    librpmb \
     libsdedrm \
     libsdm-color \
     libsdm-colormgr-algo \
     libsdm-diag \
     libsdm-disp-vndapis \
     libsdmextension \
+    libssd \
     libtinyxml2_1 \
+    libtrustedapploader \
+    libwvhidl \
+    vendor.qti.hardware.tui_comm@1.0_system_ext \
     adreno_graphics_driver \
-    gpu_profiling_vulkan_layer
+    gpu_profiling_vulkan_layer \
+    manifest_android.hardware.drm@1.4-service.widevine \
+    android.hardware.drm@1.4-service.widevine \
+    qseecomd
