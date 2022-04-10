@@ -4781,40 +4781,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libkeymasterdeviceutils",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libkeymasterdeviceutils.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libkeymasterutils",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libkeymasterutils.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "liblbs_core",
 	owner: "xiaomi",
 	strip: {
@@ -5308,23 +5274,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libqcbor",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libqcbor.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libqcc_file_agent",
 	owner: "xiaomi",
 	strip: {
@@ -5452,23 +5401,6 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libqsocket.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libqtikeymaster4",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libqtikeymaster4.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -7977,19 +7909,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-	name: "android.hardware.keymaster@4.0-service-qti",
-	owner: "xiaomi",
-	srcs: ["proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti"],
-	check_elf_files: false,
-	strip: {
-		none: true,
-	},
-	relative_install_path: "hw",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_binary {
 	name: "qcrild",
 	owner: "xiaomi",
 	srcs: ["proprietary/vendor/bin/hw/qcrild"],
@@ -8637,6 +8556,66 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libkeymasterdeviceutils",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libkeymasterdeviceutils.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libkeymasterdeviceutils.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libkeymasterprovision",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libkeymasterprovision.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libkeymasterprovision.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libkeymasterutils",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libkeymasterutils.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libkeymasterutils.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libllvm-glnext",
 	owner: "xiaomi",
 	strip: {
@@ -8677,6 +8656,46 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libqcbor",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libqcbor.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libqcbor.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libqtikeymaster4",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libqtikeymaster4.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libqtikeymaster4.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libsecureui",
 	owner: "xiaomi",
 	strip: {
@@ -8708,6 +8727,26 @@ cc_prebuilt_library_shared {
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libsecureui_svcsock.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libspcom",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libspcom.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libspcom.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -9255,6 +9294,45 @@ cc_prebuilt_binary {
 	name: "android.hardware.drm@1.4-service.widevine",
 	owner: "xiaomi",
 	srcs: ["proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.widevine"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "android.hardware.keymaster@4.0-service-qti",
+	owner: "xiaomi",
+	srcs: ["proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "android.hardware.keymaster@4.0-strongbox-service-qti",
+	owner: "xiaomi",
+	srcs: ["proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "android.hardware.keymaster@4.1-service-qti",
+	owner: "xiaomi",
+	srcs: ["proprietary/vendor/bin/hw/android.hardware.keymaster@4.1-service-qti"],
 	check_elf_files: false,
 	strip: {
 		none: true,

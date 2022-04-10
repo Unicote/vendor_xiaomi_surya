@@ -104,7 +104,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/surya/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
-    vendor/xiaomi/surya/proprietary/vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.0-service-qti.rc \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
     vendor/xiaomi/surya/proprietary/vendor/etc/init/dataqti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataqti.rc \
@@ -540,8 +539,6 @@ PRODUCT_PACKAGES += \
     libizat_client_api \
     libizat_core \
     libjnihelper \
-    libkeymasterdeviceutils \
-    libkeymasterutils \
     liblbs_core \
     libloc_api_v02 \
     libloc_socket \
@@ -571,7 +568,6 @@ PRODUCT_PACKAGES += \
     libpdmapper \
     libpdnotifier \
     libperipheral_client \
-    libqcbor \
     libqcc_file_agent \
     libqcmaputils \
     libqcrilFramework \
@@ -580,7 +576,6 @@ PRODUCT_PACKAGES += \
     libqdp \
     libqrtr \
     libqsocket \
-    libqtikeymaster4 \
     librcc \
     libremosaic_wrapper \
     libremosaiclib \
@@ -738,7 +733,6 @@ PRODUCT_PACKAGES += \
     hvdcp_opti \
     android.hardware.bluetooth@1.0-service-qti \
     android.hardware.gatekeeper@1.0-service-qti \
-    android.hardware.keymaster@4.0-service-qti \
     qcrild \
     vendor.qti.hardware.alarm@1.0-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
@@ -769,7 +763,9 @@ PRODUCT_PACKAGES += \
     dpmd
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/surya/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
-    vendor/xiaomi/surya/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc
+    vendor/xiaomi/surya/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
+    vendor/xiaomi/surya/proprietary/vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.0-service-qti.rc \
+    vendor/xiaomi/surya/proprietary/vendor/etc/init/android.hardware.keymaster@4.0-strongbox-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.0-strongbox-service-qti.rc
 
 PRODUCT_PACKAGES += \
     eglSubDriverAndroid \
@@ -787,10 +783,16 @@ PRODUCT_PACKAGES += \
     libc2d30_bltlib \
     libdpps \
     libgsl \
+    libkeymasterdeviceutils \
+    libkeymasterprovision \
+    libkeymasterutils \
     libllvm-glnext \
     libllvm-qcom \
+    libqcbor \
+    libqtikeymaster4 \
     libsecureui \
     libsecureui_svcsock \
+    libspcom \
     libspl \
     vendor.qti.hardware.tui_comm@1.0_vendor \
     libGPreqcancel \
@@ -824,4 +826,7 @@ PRODUCT_PACKAGES += \
     gpu_profiling_vulkan_layer \
     manifest_android.hardware.drm@1.4-service.widevine \
     android.hardware.drm@1.4-service.widevine \
+    android.hardware.keymaster@4.0-service-qti \
+    android.hardware.keymaster@4.0-strongbox-service-qti \
+    android.hardware.keymaster@4.1-service-qti \
     qseecomd
