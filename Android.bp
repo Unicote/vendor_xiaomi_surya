@@ -7697,54 +7697,6 @@ android_app_import {
 	system_ext_specific: true,
 }
 
-dex_import {
-	name: "tcmclient",
-	owner: "xiaomi",
-	jars: ["proprietary/framework/tcmclient.jar"],
-}
-
-dex_import {
-	name: "com.fingerprints.extension",
-	owner: "xiaomi",
-	jars: ["proprietary/vendor/framework/com.fingerprints.extension.jar"],
-	soc_specific: true,
-}
-
-dex_import {
-	name: "audiosphere",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/audiosphere.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qti.dpmframework",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/com.qti.dpmframework.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "dpmapi",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/dpmapi.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "qcrilhook",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/qcrilhook.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "qti-telephony-common",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/qti-telephony-common.jar"],
-	system_ext_specific: true,
-}
-
 prebuilt_etc {
 	name: "libsnpe_dsp_v66_domains_v2_skel",
 	owner: "xiaomi",
@@ -7761,17 +7713,6 @@ prebuilt_etc_xml {
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
-}
-
-cc_prebuilt_binary {
-	name: "chargeonlymode",
-	owner: "xiaomi",
-	srcs: ["proprietary/bin/chargeonlymode"],
-	check_elf_files: false,
-	strip: {
-		none: true,
-	},
-	prefer: true,
 }
 
 cc_prebuilt_binary {
@@ -9271,6 +9212,17 @@ android_app_import {
 }
 
 android_app_import {
+	name: "com.qualcomm.qti.gpudrivers.msmnile.api30",
+	owner: "xiaomi",
+	apk: "proprietary/vendor/app/com.qualcomm.qti.gpudrivers.msmnile.api30/com.qualcomm.qti.gpudrivers.msmnile.api30.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
 	name: "gpu_profiling_vulkan_layer",
 	owner: "xiaomi",
 	apk: "proprietary/vendor/app/gpu_profiling_vulkan_layer/gpu_profiling_vulkan_layer.apk",
@@ -9281,6 +9233,54 @@ android_app_import {
 	soc_specific: true,
 }
 
+android_app_import {
+	name: "AmbientSensePrebuilt",
+	owner: "xiaomi",
+	apk: "proprietary/product/priv-app/AmbientSensePrebuilt/AmbientSensePrebuilt.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+prebuilt_etc {
+	name: "ambient.napp_header",
+	owner: "xiaomi",
+	src: "proprietary/vendor/etc/chre/ambient.napp_header",
+	filename_from_src: true,
+	sub_dir: "chre",
+	soc_specific: true,
+}
+
+prebuilt_etc {
+	name: "ambient",
+	owner: "xiaomi",
+	src: "proprietary/vendor/etc/chre/ambient.so",
+	filename_from_src: true,
+	sub_dir: "chre",
+	soc_specific: true,
+}
+
+prebuilt_etc {
+	name: "ambient_micro.napp_header",
+	owner: "xiaomi",
+	src: "proprietary/vendor/etc/chre/ambient_micro.napp_header",
+	filename_from_src: true,
+	sub_dir: "chre",
+	soc_specific: true,
+}
+
+prebuilt_etc {
+	name: "ambient_micro",
+	owner: "xiaomi",
+	src: "proprietary/vendor/etc/chre/ambient_micro.so",
+	filename_from_src: true,
+	sub_dir: "chre",
+	soc_specific: true,
+}
+
 prebuilt_etc_xml {
 	name: "manifest_android.hardware.drm@1.4-service.widevine",
 	owner: "xiaomi",
@@ -9288,6 +9288,35 @@ prebuilt_etc_xml {
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
+}
+
+prebuilt_etc {
+	name: "music_detector.descriptor",
+	owner: "xiaomi",
+	src: "proprietary/product/etc/firmware/music_detector.descriptor",
+	filename_from_src: true,
+	sub_dir: "firmware",
+	product_specific: true,
+}
+
+prebuilt_etc {
+	name: "music_detector.sound_model",
+	owner: "xiaomi",
+	src: "proprietary/product/etc/firmware/music_detector.sound_model",
+	filename_from_src: true,
+	sub_dir: "firmware",
+	product_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "charger",
+	owner: "xiaomi",
+	srcs: ["proprietary/bin/charger"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
 }
 
 cc_prebuilt_binary {
