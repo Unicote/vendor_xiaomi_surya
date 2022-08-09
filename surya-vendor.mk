@@ -462,7 +462,6 @@ PRODUCT_PACKAGES += \
     consumerir.sm6150 \
     fingerprint.fpc.default \
     fingerprint.goodix.default \
-    vendor.qti.gnss@4.0-impl \
     vendor.qti.hardware.alarm@1.0-impl \
     vendor.qti.hardware.bluetooth_sar@1.1-impl \
     vendor.qti.hardware.btconfigstore@1.0-impl \
@@ -524,34 +523,21 @@ PRODUCT_PACKAGES += \
     libcamxstatscore \
     libcamxswprocessalgo \
     libcamxtintlessalgo \
-    libcdfw \
-    libcdfw_remote_api \
     libcdsprpc \
     libcne \
     libcneapiclient \
     libcneoplookup \
     libcom.qti.chinodeutils \
     libconfigdb \
-    libdataitems \
     libdng_sdk2vendor \
     libdpmqmihal \
     libdsi_netctrl \
     libft2vendor \
-    libgdtap \
     libgf_ca \
     libgf_hal \
     libgoodixhwfingerprint \
     libhvx_interface \
-    libizat_client_api \
-    libizat_core \
     libjnihelper \
-    liblbs_core \
-    libloc_api_v02 \
-    libloc_socket \
-    liblocationservice \
-    liblocationservice_glue \
-    liblowi_client \
-    liblowi_wifihal \
     liblqe \
     libmdsprpc \
     libmegface \
@@ -574,7 +560,6 @@ PRODUCT_PACKAGES += \
     libpdmapper \
     libpdnotifier \
     libperipheral_client \
-    libqcc_file_agent \
     libqcmaputils \
     libqcrilFramework \
     libqcrildatactl \
@@ -618,7 +603,6 @@ PRODUCT_PACKAGES += \
     libxmi_high_dynamic_range \
     libxml \
     libxml2_vendor \
-    libxtadapter \
     qcrild_librilutils \
     qtibus \
     qtimutex \
@@ -626,14 +610,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.data.factory@2.0 \
     vendor.qti.data.factory@2.1 \
     vendor.qti.data.slm@1.0 \
-    vendor.qti.gnss@1.0 \
-    vendor.qti.gnss@1.1 \
-    vendor.qti.gnss@1.2 \
-    vendor.qti.gnss@2.0 \
-    vendor.qti.gnss@2.1 \
-    vendor.qti.gnss@3.0 \
-    vendor.qti.gnss@4.0-service \
-    vendor.qti.gnss@4.0 \
     vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
@@ -650,7 +626,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.fingerprint@1.0 \
     vendor.qti.hardware.fm@1.0_vendor \
-    vendor.qti.hardware.qccsyshal@1.0 \
     vendor.qti.hardware.radio.am@1.0 \
     vendor.qti.hardware.radio.ims@1.0 \
     vendor.qti.hardware.radio.ims@1.1 \
@@ -721,7 +696,6 @@ PRODUCT_PACKAGES += \
     ims \
     qcrilmsgtunnel \
     libsnpe_dsp_v66_domains_v2_skel \
-    vendor.qti.gnss@4.0-service \
     adpl \
     adsprpcd \
     batterysecret \
@@ -742,8 +716,6 @@ PRODUCT_PACKAGES += \
     imsqmidaemon \
     imsrcsd \
     irsc_util \
-    loc_launcher \
-    lowi-server \
     mi_thermald \
     netmgrd \
     pd-mapper \
@@ -754,12 +726,10 @@ PRODUCT_PACKAGES += \
     qti \
     rmt_storage \
     sensors.qti \
-    slim_daemon \
     tftp_server \
     thermal-engine \
     time_daemon \
     vppservice \
-    xtra-daemon \
     dpmd
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/surya/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
@@ -782,10 +752,13 @@ PRODUCT_PACKAGES += \
     libadreno_utils \
     libc2d30_bltlib \
     libdpps \
+    libgnsspps \
     libgsl \
+    libizat_core \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
+    liblbs_core \
     libllvm-glnext \
     libllvm-qcom \
     libqcbor \
@@ -799,11 +772,15 @@ PRODUCT_PACKAGES += \
     libGPreqcancel_svc \
     libQSEEComAPI \
     libcpion \
+    libdataitems \
     libdisplayqos \
     libdrmfs \
     libdrmtime \
     libhdcpsrm \
     libhdr_tm \
+    libloc_api_v02 \
+    liblowi_client \
+    liblowi_wifihal \
     libminkdescriptor \
     libminksocket \
     liboemcrypto \
@@ -838,4 +815,7 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service-qti \
     android.hardware.keymaster@4.0-strongbox-service-qti \
     android.hardware.keymaster@4.1-service-qti \
-    qseecomd
+    loc_launcher \
+    lowi-server \
+    qseecomd \
+    xtra-daemon
